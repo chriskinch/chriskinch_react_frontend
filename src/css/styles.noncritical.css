@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/* =============================================================================
+   Non critical stylesheet
+   ========================================================================== */
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+.node--view-mode-teaser > .field:not(.field--name-field-teaser-image):not(.field--name-field-primary-image) {
+  width: 100%; }
+
+.node--view-mode-teaser .field--name-body p {
+  margin-top: 0; }
+
+footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  background-color: #222222;
+  color: #fefefe;
+  padding: 1.5em 0; }
+
+.region-footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.block {
+  /* Block wrapper */
+  margin-bottom: 1.5em; }
+
+.block-title {
+  font-size: 1.5em;
+  line-height: 1.5em; }
+
+.region-footer .block-title {
+  color: #fefefe; }
+
+#block-googlemapfullwidth {
+  position: absolute;
+  height: 359px;
+  top: 2em;
+  left: 0;
+  right: 0; }
+
+.gm-style {
+  color: #444444; }
+  .gm-style img {
+    max-width: inherit; }
+
+.map-marker-info .title {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: 0.375em;
+  margin-bottom: 0em;
+  font-weight: bold; }
+
+.map-marker-info p {
+  font-size: 1rem;
+  margin-top: 0.375em;
+  margin-bottom: 0.375em; }
+
+.map-marker-info .map-marker-meta {
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #777777;
+  margin-top: 0.375em;
+  margin-bottom: 0.375em; }
+
+.block-contact-block {
+  background-color: #222222;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: relative;
+  z-index: 10; }
+  .block-contact-block .block-title {
+    margin-top: 0em;
+    position: relative; }
+    .block-contact-block .block-title:before {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+      /* you can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+      content: '\e800';
+      position: absolute;
+      font-size: 2em;
+      right: 0;
+      top: -0.1em;
+      color: rgba(255, 255, 255, 0.05);
+      -webkit-transform: rotate(19deg);
+      text-shadow: 0 -1px 0 #111;
+      z-index: -1; }
+  .block-contact-block .form-item {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 1em; }
+    .block-contact-block .form-item input,
+    .block-contact-block .form-item textarea {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      background: #3c3c3c;
+      color: #fefefe; }
+      .block-contact-block .form-item input:focus,
+      .block-contact-block .form-item textarea:focus {
+        z-index: 10; }
+    .block-contact-block .form-item textarea {
+      height: 8.5em; }
+  .block-contact-block label {
+    display: block;
+    margin-left: 1em;
+    line-height: 1;
+    font-weight: 300;
+    font-weight: normal;
+    color: #777777;
+    position: absolute;
+    top: 0.75em;
+    z-index: 1;
+    pointer-events: none; }
+  .block-contact-block .form-actions {
+    text-align: right; }
+    .block-contact-block .form-actions .button:last-child {
+      margin-right: 0; }
+  @media (min-width: 38.75em) and (max-width: 59.99em) {
+    .block-contact-block {
+      width: 50%; } }
+  @media (min-width: 60em) {
+    .block-contact-block {
+      width: calc(1200px / 3); } }
+
+.field--name-field-tags .field__item,
+.field--name-field-category .field__item {
+  text-transform: uppercase;
+  background: #dddddd;
+  font-size: 0.75em;
+  line-height: 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em; }
+  .field--name-field-tags .field__item a:link,
+  .field--name-field-category .field__item a:link, .field--name-field-tags .field__item a:visited,
+  .field--name-field-category .field__item a:visited {
+    color: #444444;
+    padding: 1em 1em 0.95em;
+    display: block; }
+  .field--name-field-tags .field__item a:hover,
+  .field--name-field-category .field__item a:hover {
+    background: #eebb00; }
+  .field--name-field-tags .field__item a.active,
+  .field--name-field-category .field__item a.active {
+    color: #444444; }
+
+.field--name-field-tags,
+.field--name-field-category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; }
+
+.group-meta {
+  background: #fefefe;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 1.5em 1.5em;
+  margin-bottom: 2em;
+  overflow: hidden; }
+  .group-meta p:first-child {
+    margin-top: 0; }
+  .group-meta .group-tags {
+    margin-bottom: 1em;
+    overflow: hidden; }
+
+.node--view-mode-teaser .field--name-field-category {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  flex-direction: column; }
+  .node--view-mode-teaser .field--name-field-category .field__item {
+    background-color: white;
+    border-left: 3px solid #eebb00; }
+
+.field--name-field-link {
+  float: left;
+  clear: both;
+  display: inline-block;
+  text-align: center; }
+  .field--name-field-link .field__item {
+    margin-bottom: 0.5em; }
+  .field--name-field-link a {
+    background: #eebb00;
+    padding: 0.75em 1.5em;
+    border-radius: 10em;
+    color: #444444;
+    text-transform: uppercase;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    letter-spacing: 1px;
+    display: block; }
+    .field--name-field-link a:hover {
+      background-color: #ffdb55; }
+
+@media (min-width: 60em) {
+  .node--view-mode-full .field--name-field-primary-image {
+    float: right;
+    width: 70%; } }
+
+@media (min-width: 60em) {
+  .field--name-field-image {
+    float: right;
+    width: 70%; } }
+
+@media print {
+  a:link,
+  a:visited {
+    /* underline all links */
+    text-decoration: underline !important; }
+    #site-name a:link, #site-name
+    a:visited {
+      /* Don't underline header */
+      text-decoration: none !important; }
+  #content a[href]:after {
+    /* Add visible URL after links. */
+    content: " (" attr(href) ")";
+    font-weight: normal;
+    font-size: 16px; }
+  #content a[href^="javascript:"]:after,
+  #content a[href^="#"]:after {
+    /* Only display useful links. */
+    content: ""; }
+  #content abbr[title]:after {
+    /* Add visible title after abbreviations. */
+    content: " (" attr(title) ")"; }
+  #content {
+    /* Un-float the content */
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important; }
+  body,
+  #page,
+  #main,
+  #content {
+    /* Turn off any background colors or images */
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important; }
+  #skip-link,
+  #toolbar,
+  #navigation,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  #footer,
+  .breadcrumb,
+  .tabs,
+  .action-links,
+  .links,
+  .book-navigation,
+  .forum-topic-navigation,
+  .pager,
+  .feed-icons {
+    /* Hide sidebars and nav elements */
+    visibility: hidden;
+    display: none; } }
+
+/* End @media print */
+
+/*# sourceMappingURL=styles.noncritical.css.map */
+/*# sourceMappingURL=styles.noncritical.css.map */

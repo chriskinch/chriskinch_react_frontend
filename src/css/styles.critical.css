@@ -1,0 +1,1486 @@
+@charset "UTF-8";
+/* =============================================================================
+   Critical stylesheet
+   ========================================================================== */
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* =============================================================================
+   Fonts
+   ========================================================================== */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("/themes/chriskinch/fonts/fontello/fontello.woff2?57727769") format("woff2"), url("/themes/chriskinch/fonts/fontello/fontello.woff?57727769") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-pencil:before {
+  content: '\270e'; }
+
+/* '✎' */
+.icon-cancel:before {
+  content: '\2715'; }
+
+/* '✕' */
+.icon-down-open:before {
+  content: '\e75c'; }
+
+/* '' */
+.icon-up-open:before {
+  content: '\e75f'; }
+
+/* '' */
+.icon-arrows-cw:before {
+  content: '\e760'; }
+
+/* '' */
+.icon-mail-alt:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-twitter-squared:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-facebook-squared:before {
+  content: '\e802'; }
+
+/* '' */
+.icon-linkedin-squared:before {
+  content: '\e803'; }
+
+/* '' */
+.icon-gplus-squared:before {
+  content: '\e804'; }
+
+/* '' */
+.icon-github-circled:before {
+  content: '\e805'; }
+
+/* '' */
+.icon-drupal:before {
+  content: '\e806'; }
+
+/* '' */
+.icon-menu:before {
+  content: '\e807'; }
+
+/* '' */
+.icon-lastfm-rect:before {
+  content: '\e808'; }
+
+/* '' */
+.icon-spotify-circled:before {
+  content: '\e809'; }
+
+/* '' */
+.icon-headphones:before {
+  content: '\e80a'; }
+
+/* '' */
+.icon-phone:before {
+  content: '\e80b'; }
+
+/* '' */
+.icon-ok:before {
+  content: '\e80d'; }
+
+/* '' */
+.icon-beaker:before {
+  content: '\e80e'; }
+
+/* '' */
+.icon-certificate:before {
+  content: '\e80f'; }
+
+/* '' */
+.icon-link-1:before {
+  content: '\e810'; }
+
+/* '' */
+.icon-brush:before {
+  content: '\e811'; }
+
+/* '' */
+.icon-cog:before {
+  content: '\e812'; }
+
+/* '' */
+.icon-download:before {
+  content: '\e813'; }
+
+/* '' */
+.icon-link:before {
+  content: '🔗'; }
+
+/* '\1f517' */
+.icon-wrench:before {
+  content: '🔧'; }
+
+/* '\1f527' */
+.icon-clock:before {
+  content: '🕔'; }
+
+/* '\1f554' */
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   Normalize.css is intended to be used as an alternative to CSS resets.
+
+   It is suggested that you read through the normalize.css file and customise it
+   to meet the design requirements of a project rather including it as a "black
+   box". @see http://nicolasgallagher.com/about-normalize-css/
+
+   Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+         @see http://snook.ca/archives/html_and_css/no_css_reset/
+   ========================================================================== */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+* {
+  box-sizing: border-box; }
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 &amp; FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 &amp; FF3
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+  display: none; }
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  /* Establishes a vertical rhythm unit using $base-line-height. */
+  line-height: 1.5em; }
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif; }
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  margin: 0; }
+  body > * {
+    -webkit-transition: -webkit-transform 0.25s;
+    -webkit-transition-delay: 0s;
+    -moz-transition: -moz-transform 0.25s;
+    -o-transition: -o-transform 0.25s;
+    transition: transform 0.25s false false; }
+    @media (min-width: 60em) {
+      body > * {
+        -webkit-transition: none 0;
+        -webkit-transition-delay: 0s;
+        -moz-transition: none 0;
+        -o-transition: none 0;
+        transition: none 0 false false; } }
+
+/* Thematic break */
+hr {
+  height: 1px;
+  border: 1px solid #666;
+  padding-bottom: -1px;
+  margin: 1.5em 0; }
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap; }
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+b,
+strong {
+  font-weight: bold; }
+
+blockquote {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.5em 2em; }
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.5em 0; }
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp,
+tt,
+var {
+  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+  /* The $font-monospace value ends with ", serif". */
+  font-size: 1em;
+  line-height: 1.5em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+q {
+  quotes: none; }
+
+/* 2 */
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+/* @todo Determine how big element affects vertical rhythm. */
+small {
+  font-size: 75%; }
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+dl,
+menu,
+ol,
+ul,
+.item-list ul {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.5em 0;
+  margin-top: 0; }
+
+.item-list ul li {
+  /* Drupal override */
+  margin: 0; }
+
+dd {
+  margin: 0 0 0 2em;
+  /* LTR */ }
+
+ul ul, ul ol, ol ul, ol ol, .item-list ul ul, .item-list ul ol, .item-list ol ul, .item-list ol ol {
+  margin: 0;
+  /* Turn off margins on nested lists. */ }
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+menu,
+ol,
+ul,
+.item-list ul {
+  padding: 0 0 0 2em;
+  /* LTR */ }
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+  /* vertical-align: bottom; */
+  /* Suppress the space beneath the baseline */
+  /* Responsive images */
+  /* @todo Add responsive embedded video. */
+  max-width: 100%;
+  height: auto; }
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+figure {
+  margin: 0; }
+
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* =============================================================================
+   HTML &amp; Body
+   ========================================================================== */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-weight: 300;
+  background-color: #eeeeee; }
+  @media (min-width: 60em) {
+    body {
+      background-color: #fcfcfc;
+      background-image: url("/themes/chriskinch/images/squairy_light.png"); } }
+
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+form {
+  margin: 0; }
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */ }
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  border: none;
+  padding: 0.55em 1em;
+  border-radius: 0.2em; }
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+button,
+input {
+  line-height: normal;
+  /* 1 */ }
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: #eebb00;
+  padding: 0.3em 1.5em;
+  border-radius: 10em;
+  color: #444444;
+  border: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */ }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background-color: #ffdb55; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */ }
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * The order of link states are based on Eric Meyer's article:
+ * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+ */
+a:link {
+  color: #cc8844;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s; }
+
+a:visited {
+  color: #b4885c; }
+
+a:hover,
+a:focus {
+  color: #e4882c; }
+
+a:active {
+  color: #e2bb94; }
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {
+  outline: 0; }
+
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* width: 100%; */
+  /* Prevent cramped-looking tables */
+  /* Add vertical rhythm margins. */
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+/*
+ * Drupal provides table styling which is only useful for its admin section
+ * forms, so we override this default CSS. (We set it back in forms.css.)
+ */
+th {
+  text-align: left;
+  /* LTR */
+  padding: 0;
+  border-bottom: none; }
+
+tbody {
+  border-top: none; }
+
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* =============================================================================
+   Typography
+   ========================================================================== */
+body {
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 16px;
+  line-height: 24px; }
+
+/*
+ * Titles
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-weight: 300; }
+
+h1 {
+  /* Sets the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 3em;
+  line-height: 1.25em;
+  /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  letter-spacing: -0.075em; }
+  @media (min-width: 38.75em) and (max-width: 59.99em) {
+    h1 {
+      font-size: 4em;
+      line-height: 1.125em; } }
+  @media (min-width: 60em) {
+    h1 {
+      font-size: 5em;
+      line-height: 1.05em; } }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: 0.75em;
+  margin-bottom: 1em; }
+  @media (min-width: 38.75em) {
+    h2 {
+      font-size: 2em;
+      line-height: 1.125em; } }
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1.7307692308em;
+  margin-top: 1.1538461538em;
+  margin-bottom: 1.1538461538em; }
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+h5 {
+  font-size: 0.83em;
+  line-height: 1.8072289157em;
+  margin-top: 1.8072289157em;
+  margin-bottom: 1.8072289157em; }
+
+h6 {
+  font-size: 0.75em;
+  line-height: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+/**
+ * @file
+ * Utility classes to hide elements in different ways.
+ */
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be collapsible details that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.hidden {
+  display: none; }
+
+/**
+ * Hide elements visually, but keep them available for screen readers.
+ *
+ * Used for information required for screen reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal; }
+
+/**
+ * The .focusable class extends the .visually-hidden class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+  width: auto; }
+
+/**
+ * Hide visually and from screen readers, but maintain layout.
+ */
+.invisible {
+  visibility: hidden; }
+
+.layout-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  transition: transform 0.25s; }
+
+.view-frontpage .view-content {
+  display: flex;
+  flex-wrap: wrap; }
+
+.view-frontpage .views-row {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 38.75em) and (max-width: 59.99em) {
+  .view-frontpage .views-row {
+    width: calc(100% / 2); } }
+
+@media (min-width: 60em) {
+  .view-frontpage .views-row {
+    width: calc(100% / 3); } }
+
+@media (min-width: 60em) {
+  .node--view-mode-full {
+    overflow: hidden;
+    *zoom: 1; }
+    .node--view-mode-full .group-meta {
+      width: 25%;
+      float: left; }
+    .node--view-mode-full > *:not(.group-meta) {
+      width: 68.75%;
+      float: right; } }
+
+.region-header {
+  text-align: center;
+  width: 100%;
+  background-color: #eecc44;
+  padding: 0 1.5em 1.5em 1.5em; }
+  @media (min-width: 60em) {
+    .region-header {
+      width: 100vw;
+      margin-left: calc(50% - 50vw); } }
+
+.site-name {
+  /* The name of the website */
+  display: none; }
+
+.site-slogan {
+  /* The slogan (or tagline) of a website */
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: 1em; }
+  .site-slogan span {
+    font-weight: bold; }
+
+.site-name {
+  display: none; }
+
+.site-logo {
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  top: 50px;
+  overflow: hidden;
+  margin-bottom: 1em; }
+  .site-logo img {
+    background-color: #222222;
+    padding: 50px;
+    border-radius: 100em;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    position: relative;
+    top: -50px; }
+
+/*
+   * The active item in a Drupal menu
+   */
+ul.menu a.is-active {
+  color: #fcfcfc; }
+
+/*
+   * The skip-link link will be for the mobile popout nav in mobile.
+   */
+.skip-link {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  background-color: #222222;
+  padding: 0 0.5em;
+  display: flex;
+  align-items: center; }
+  .skip-link:before {
+    font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    display: inline-block;
+    text-align: center;
+    content: 'content';
+    color: #dddddd;
+    border: 2px solid #dddddd;
+    border-radius: 0.3em;
+    padding: 0px 1em 2px;
+    line-height: 30px; }
+  .skip-link:hover:before {
+    color: #fefefe;
+    border-color: #fefefe; }
+  @media (min-width: 60em) {
+    .skip-link {
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px); } }
+
+/*
+   * Navigation bar
+   */
+.region-primary-menu {
+  position: fixed;
+  width: 250px;
+  left: -250px;
+  top: 0;
+  bottom: 0;
+  border-top: 50px solid #151515;
+  background: #222222; }
+  @media (max-width: 38.74em) {
+    .region-primary-menu {
+      z-index: 9999; } }
+  .region-primary-menu .menu {
+    margin-left: 0; }
+  .region-primary-menu .menu-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+  .region-primary-menu a {
+    color: #555555;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    padding: 1em;
+    display: block; }
+    .region-primary-menu a:hover {
+      color: #fcfcfc; }
+  .region-primary-menu .block {
+    margin-bottom: 0; }
+  .region-primary-menu .block-title {
+    font-size: 0.6em;
+    color: #444444;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    line-height: 1;
+    padding: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid #DDAA00; }
+  @media (min-width: 60em) {
+    .region-primary-menu {
+      height: 100px;
+      width: 100%;
+      left: 0;
+      top: 0;
+      border: 0;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: calc((100vw - 1200px) / 2);
+      padding-right: calc((100vw - 1200px) / 2); }
+      .region-primary-menu .menu-item {
+        float: left;
+        padding-top: 0;
+        border-bottom: none; } }
+
+.navigation-open {
+  overflow: hidden; }
+  .navigation-open .layout-container {
+    transform: translateX(250px); }
+    .navigation-open .layout-container:before {
+      content: '';
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 40; }
+  .navigation-open #navigation {
+    overflow: auto;
+    z-index: 50; }
+  .navigation-open #skip-link a {
+    background-color: #151515; }
+  @media (min-width: 60em) {
+    .navigation-open {
+      overflow: auto;
+      position: static; }
+      .navigation-open > * {
+        -webkit-transform: inherit;
+        transform: inherit; }
+      .navigation-open:before {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px); }
+      .navigation-open #navigation {
+        overflow: visible;
+        z-index: inherit; } }
+
+/*
+   * Menu blocks
+   */
+@media (min-width: 60em) {
+  .block-menu .block-title {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); } }
+
+/*
+   * Social menu block
+   */
+@media (min-width: 60em) {
+  .menu--social-networks .menu-item {
+    padding-right: 0.75em; }
+  .menu--social-networks a {
+    display: inline-block;
+    visibility: hidden;
+    width: 1em;
+    white-space: nowrap;
+    padding: 0;
+    font-size: 1.5em; }
+    .menu--social-networks a:before, .menu--social-networks a:after {
+      visibility: visible; } }
+
+.menu-linkedin:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e803'; }
+
+.menu-github:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e805'; }
+
+.menu-facebook:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e802'; }
+
+.menu-google:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e804'; }
+
+.menu-twitter:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e801'; }
+
+.menu-lastfm:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e808'; }
+
+.menu-download:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e813'; }
+
+.node--view-mode-teaser {
+  background-color: #fefefe;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  margin: 1em;
+  padding: 1.5em; }
+  @media (min-width: 38.75em) {
+    .node--view-mode-teaser {
+      margin-left: 1em;
+      margin-right: 1em; } }
+  .node--view-mode-teaser .field--name-field-teaser-image,
+  .node--view-mode-teaser .field--name-field-primary-image {
+    order: -1; }
+  .node--view-mode-teaser .node--title a {
+    color: #444444; }
+
+.block-page-title-block {
+  margin-left: 1.5em; }
+
+.node--view-mode-teaser .field--name-field-primary-image {
+  line-height: 0;
+  margin: -1.5em -1.5em 0 -1.5em; }
+
+.field--name-field-teaser-image {
+  line-height: 0;
+  margin: -1.5em -1.5em 0 -1.5em; }
+
+/*# sourceMappingURL=styles.critical.css.map */
