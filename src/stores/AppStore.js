@@ -7,7 +7,16 @@ class AppStore extends EventEmitter {
   constructor() {
     super()
     this.articles = [];
-    console.log(axios('http://chriskinch.com.drupal-8.x.dev/jsonapi/node/article?_format=api_json&fields[node--article]=field_category,field_image,field_primary_image,field_tags,field_teaser_image&include=field_category,field_image,field_primary_image,field_tags,field_teaser_image'));
+  }
+
+  loadArticles() {
+    const api_url = 'http://chriskinch.com.drupal-8.x.dev/jsonapi/node/article?_format=api_json&fields[node--article]=field_category,field_image,field_primary_image,field_tags,field_teaser_image&include=field_category,field_image,field_primary_image,field_tags,field_teaser_image';
+    axios(api_url).then((response) => {
+      console.log(response.data);
+      return response.data;
+    }).catch((error) => {
+      console.log("Somethings wrong:", error);
+    })
   }
 
   getAll() {
@@ -28,4 +37,4 @@ class AppStore extends EventEmitter {
 const appStore = new AppStore;
 dispatcher.register(appStore.handleActions.bind(appStore));
 
-export default AppStore;
+export default appStore;

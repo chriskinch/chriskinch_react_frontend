@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 
-import TodoStore from "../stores/AppStore";
+import AppStore from "../stores/AppStore";
 
 export default class Homepage extends Component {
+  constructor(){
+    super();
+    this.state = {
+      articles: AppStore.loadArticles()
+    }
+  }
+
   render() {
     return (
       <div>
@@ -11,4 +18,5 @@ export default class Homepage extends Component {
     );
   }
 }
+
 

@@ -16,6 +16,9 @@ export default class Layout extends Component {
           <Nav />
           <Social />
         </div>
+        <div class="main">
+          {this.props.children}
+        </div>
       </div>
     );
   }
