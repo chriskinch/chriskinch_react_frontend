@@ -6,15 +6,15 @@ export default class Header extends Component {
   render() {
     return (
       <header>
-        <div class="region region-header">
-          <div id="block-chriskinch-branding" class="block block-system block-system-branding-block">
-            <a href="/" title="Home" rel="home" class="site-logo">
-              <img src={ logo } />
+        <div className="region region-header">
+          <div id="block-chriskinch-branding" className="block block-system block-system-branding-block">
+            <a href="/" title="Home" rel="home" className="site-logo">
+              <img src={ logo } alt="chriskinch.com logo" />
             </a>
-            <div class="site-name">
+            <div className="site-name">
               <a href="/" title="Home" rel="home">chriskinch.com</a>
             </div>
-            <div class="site-slogan">Hello. I'm Chris Kinch. Designer, developer, Drupal themer &amp; all-round geek.</div>
+            <div className="site-slogan">Hello. I'm Chris Kinch. Designer, developer, Drupal themer &amp; all-round geek.</div>
           </div>
         </div>
       </header>

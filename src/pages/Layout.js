@@ -10,13 +10,13 @@ import "../css/styles.noncritical.css";
 export default class Layout extends Component {
   render() {
     return (
-      <div class="layout-container">
+      <div className="layout-container">
         <Header />
-        <div class="region region-primary-menu">
+        <div className="region region-primary-menu">
           <Nav />
           <Social />
         </div>
-        <div class="main">
+        <div className="main">
           {this.props.children}
         </div>
       </div>

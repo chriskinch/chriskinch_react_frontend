@@ -30,11 +30,13 @@ class AppStore extends EventEmitter {
         this.emit("change");
         break;
       }
+      default:
+        console.log("This does not match an action type!");
     }
   }
 }
 
-const appStore = new AppStore;
+const appStore = new AppStore();
 dispatcher.register(appStore.handleActions.bind(appStore));
 
 export default appStore;

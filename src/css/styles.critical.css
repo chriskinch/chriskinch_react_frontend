@@ -58,7 +58,7 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url("/themes/chriskinch/fonts/fontello/fontello.woff2?57727769") format("woff2"), url("/themes/chriskinch/fonts/fontello/fontello.woff?57727769") format("woff");
+  src: url("../fonts/fontello/fontello.woff2?57727769") format("woff2"), url("/themes/chriskinch/fonts/fontello/fontello.woff?57727769") format("woff");
   font-weight: normal;
   font-style: normal; }
 
