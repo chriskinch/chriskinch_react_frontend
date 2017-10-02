@@ -10,6 +10,9 @@ import "../css/styles.noncritical.css";
 
 export default class Layout extends Component {
   render() {
+    const { location } = this.props;
+    const TitleComponent = (location.pathname !== '/') ? <Title /> : null
+
     return (
       <div className="layout-container">
         <Header />
@@ -19,9 +22,9 @@ export default class Layout extends Component {
         </div>
         <div className="layout-content">
           <div className="region region-content">
-            <Title title="My new title" />
+            { TitleComponent }
             <div id="block-chriskinch-content" className="block block-system block-system-main-block">
-              {this.props.children}
+              { this.props.children }
             </div>
           </div>
         </div>

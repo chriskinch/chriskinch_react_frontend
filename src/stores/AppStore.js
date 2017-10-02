@@ -1,6 +1,6 @@
-import { EventEmitter } from "events";
-
-import dispatcher from "../dispatcher";
+import { EventEmitter } from 'events';
+import _ from 'lodash';
+import dispatcher from '../dispatcher';
 
 class AppStore extends EventEmitter {
   constructor() {
@@ -12,10 +12,32 @@ class AppStore extends EventEmitter {
     return this.articles;
   }
 
+  processImages() {
+    const data = this.articles.data;
+    for(let i=0; i<data.length; i++){
+      let { field_primary_image, field_teaser_image } = data[i].relationships;
+      if(!field_teaser_image.data) {
+        this.articles.data[i].relationships.field_teaser_image = field_primary_image;
+      }
+    }
+  }
+
+  getInclude(ref) {
+    const included = this.articles.included;
+    let lookup = _.find(included, ref);
+
+    // console.log(included);
+    // console.log(ref);
+    // console.log(lookup);
+
+    return lookup;
+  }
+
   handleActions(action) {
     switch(action.type) {
       case "RECEIVE_ARTICLES": {
         this.articles = action.articles;
+        this.processImages();
         this.emit("change");
         break;
       }

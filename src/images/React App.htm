@@ -1,4 +1,26 @@
-@charset "UTF-8";
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:3000/#/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">@charset "UTF-8";
 /* =============================================================================
    Critical stylesheet
    ========================================================================== */
@@ -58,7 +80,7 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url("../fonts/fontello/fontello.woff2?57727769") format("woff2"), url("/themes/chriskinch/fonts/fontello/fontello.woff?57727769") format("woff");
+  src: url(/static/media/fontello.ba85b0b2.woff2) format("woff2"), url("/themes/chriskinch/fonts/fontello/fontello.woff?57727769") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -99,7 +121,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
 .icon-pencil:before {
-  content: '\270e'; }
+  content: '\270E'; }
 
 /* '✎' */
 .icon-cancel:before {
@@ -107,103 +129,103 @@
 
 /* '✕' */
 .icon-down-open:before {
-  content: '\e75c'; }
+  content: '\E75C'; }
 
 /* '' */
 .icon-up-open:before {
-  content: '\e75f'; }
+  content: '\E75F'; }
 
 /* '' */
 .icon-arrows-cw:before {
-  content: '\e760'; }
+  content: '\E760'; }
 
 /* '' */
 .icon-mail-alt:before {
-  content: '\e800'; }
+  content: '\E800'; }
 
 /* '' */
 .icon-twitter-squared:before {
-  content: '\e801'; }
+  content: '\E801'; }
 
 /* '' */
 .icon-facebook-squared:before {
-  content: '\e802'; }
+  content: '\E802'; }
 
 /* '' */
 .icon-linkedin-squared:before {
-  content: '\e803'; }
+  content: '\E803'; }
 
 /* '' */
 .icon-gplus-squared:before {
-  content: '\e804'; }
+  content: '\E804'; }
 
 /* '' */
 .icon-github-circled:before {
-  content: '\e805'; }
+  content: '\E805'; }
 
 /* '' */
 .icon-drupal:before {
-  content: '\e806'; }
+  content: '\E806'; }
 
 /* '' */
 .icon-menu:before {
-  content: '\e807'; }
+  content: '\E807'; }
 
 /* '' */
 .icon-lastfm-rect:before {
-  content: '\e808'; }
+  content: '\E808'; }
 
 /* '' */
 .icon-spotify-circled:before {
-  content: '\e809'; }
+  content: '\E809'; }
 
 /* '' */
 .icon-headphones:before {
-  content: '\e80a'; }
+  content: '\E80A'; }
 
 /* '' */
 .icon-phone:before {
-  content: '\e80b'; }
+  content: '\E80B'; }
 
 /* '' */
 .icon-ok:before {
-  content: '\e80d'; }
+  content: '\E80D'; }
 
 /* '' */
 .icon-beaker:before {
-  content: '\e80e'; }
+  content: '\E80E'; }
 
 /* '' */
 .icon-certificate:before {
-  content: '\e80f'; }
+  content: '\E80F'; }
 
 /* '' */
 .icon-link-1:before {
-  content: '\e810'; }
+  content: '\E810'; }
 
 /* '' */
 .icon-brush:before {
-  content: '\e811'; }
+  content: '\E811'; }
 
 /* '' */
 .icon-cog:before {
-  content: '\e812'; }
+  content: '\E812'; }
 
 /* '' */
 .icon-download:before {
-  content: '\e813'; }
+  content: '\E813'; }
 
 /* '' */
 .icon-link:before {
-  content: '🔗'; }
+  content: '\1F517'; }
 
 /* '\1f517' */
 .icon-wrench:before {
-  content: '🔧'; }
+  content: '\1F527'; }
 
 /* '\1f527' */
 .icon-clock:before {
-  content: '🕔'; }
+  content: '\1F554'; }
 
 /* '\1f554' */
 /* =============================================================================
@@ -251,7 +273,8 @@
    HTML5 display definitions
    ========================================================================== */
 * {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 /*
  * Corrects block display not defined in IE6/7/8/9 &amp; FF3
@@ -327,15 +350,19 @@ body {
   body > * {
     -webkit-transition: -webkit-transform 0.25s;
     -webkit-transition-delay: 0s;
-    -moz-transition: -moz-transform 0.25s;
     -o-transition: -o-transform 0.25s;
-    transition: transform 0.25s false false; }
+    -webkit-transition: -webkit-transform 0.25s false false;
+    transition: -webkit-transform 0.25s false false;
+    -o-transition: transform 0.25s false false;
+    transition: transform 0.25s false false;
+    transition: transform 0.25s false false, -webkit-transform 0.25s false false; }
     @media (min-width: 60em) {
       body > * {
         -webkit-transition: none 0;
         -webkit-transition-delay: 0s;
-        -moz-transition: none 0;
         -o-transition: none 0;
+        -webkit-transition: none 0 false false;
+        -o-transition: none 0 false false;
         transition: none 0 false false; } }
 
 /* Thematic break */
@@ -566,7 +593,7 @@ body {
   @media (min-width: 60em) {
     body {
       background-color: #fcfcfc;
-      background-image: url("../images/squairy_light.png"); } }
+      background-image: url("/themes/chriskinch/images/squairy_light.png"); } }
 
 /* =============================================================================
    Config
@@ -659,7 +686,6 @@ input[type="submit"] {
   border: none;
   text-transform: uppercase;
   -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
   cursor: pointer;
@@ -685,7 +711,8 @@ input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -698,7 +725,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */ }
 
@@ -769,7 +795,6 @@ a:link {
   color: #cc8844;
   text-decoration: none;
   -webkit-transition: background-color 0.3s, color 0.3s;
-  -moz-transition: background-color 0.3s, color 0.3s;
   -o-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s; }
 
@@ -1049,11 +1074,17 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
-  transition: transform 0.25s; }
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s; }
 
 .view-frontpage .view-content {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .view-frontpage .views-row {
   max-width: 500px;
@@ -1115,7 +1146,8 @@ h6 {
     background-color: #222222;
     padding: 50px;
     border-radius: 100em;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
     position: relative;
     top: -50px; }
 
@@ -1138,8 +1170,10 @@ ul.menu a.is-active {
   margin: 0;
   background-color: #222222;
   padding: 0 0.5em;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center; }
+  -ms-flex-align: center;
+      align-items: center; }
   .skip-link:before {
     font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
     display: inline-block;
@@ -1207,9 +1241,12 @@ ul.menu a.is-active {
       top: 0;
       border: 0;
       position: absolute;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
       padding-left: calc((100vw - 1200px) / 2);
       padding-right: calc((100vw - 1200px) / 2); }
       .region-primary-menu .menu-item {
@@ -1220,7 +1257,9 @@ ul.menu a.is-active {
 .navigation-open {
   overflow: hidden; }
   .navigation-open .layout-container {
-    transform: translateX(250px); }
+    -webkit-transform: translateX(250px);
+        -ms-transform: translateX(250px);
+            transform: translateX(250px); }
     .navigation-open .layout-container:before {
       content: '';
       color: #fff;
@@ -1242,7 +1281,8 @@ ul.menu a.is-active {
       position: static; }
       .navigation-open > * {
         -webkit-transform: inherit;
-        transform: inherit; }
+        -ms-transform: inherit;
+            transform: inherit; }
       .navigation-open:before {
         position: absolute !important;
         height: 1px;
@@ -1303,7 +1343,7 @@ ul.menu a.is-active {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-  content: '\e803'; }
+  content: '\E803'; }
 
 .menu-github:before {
   font-family: "fontello";
@@ -1328,7 +1368,7 @@ ul.menu a.is-active {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-  content: '\e805'; }
+  content: '\E805'; }
 
 .menu-facebook:before {
   font-family: "fontello";
@@ -1353,7 +1393,7 @@ ul.menu a.is-active {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-  content: '\e802'; }
+  content: '\E802'; }
 
 .menu-google:before {
   font-family: "fontello";
@@ -1378,7 +1418,7 @@ ul.menu a.is-active {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-  content: '\e804'; }
+  content: '\E804'; }
 
 .menu-twitter:before {
   font-family: "fontello";
@@ -1403,7 +1443,7 @@ ul.menu a.is-active {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-  content: '\e801'; }
+  content: '\E801'; }
 
 .menu-lastfm:before {
   font-family: "fontello";
@@ -1428,7 +1468,7 @@ ul.menu a.is-active {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-  content: '\e808'; }
+  content: '\E808'; }
 
 .menu-download:before {
   font-family: "fontello";
@@ -1453,13 +1493,15 @@ ul.menu a.is-active {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-  content: '\e813'; }
+  content: '\E813'; }
 
 .node--view-mode-teaser {
   background-color: #fefefe;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 1em;
   padding: 1.5em; }
   @media (min-width: 38.75em) {
@@ -1468,7 +1510,8 @@ ul.menu a.is-active {
       margin-right: 1em; } }
   .node--view-mode-teaser .field--name-field-teaser-image,
   .node--view-mode-teaser .field--name-field-primary-image {
-    order: -1; }
+    -ms-flex-order: -1;
+        order: -1; }
   .node--view-mode-teaser .node--title a {
     color: #444444; }
 
@@ -1481,6 +1524,342 @@ ul.menu a.is-active {
 
 .field--name-field-teaser-image {
   line-height: 0;
-  margin: -1.5em -1.5em 0 -1.5em; }
+  margin: -1.5em -1.5em 0 -1.5em; }</style><style type="text/css">@charset "UTF-8";
+/* =============================================================================
+   Non critical stylesheet
+   ========================================================================== */
+/* =============================================================================
+   Config
+   ========================================================================== */
+/* '' */
+/* '\1f517' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '✕' */
+/* '' */
+/* '✎' */
+/* '' */
+/* '\1f527' */
+/* '\1f554' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+/* '' */
+.node--view-mode-teaser > .field:not(.field--name-field-teaser-image):not(.field--name-field-primary-image) {
+  width: 100%; }
 
-/*# sourceMappingURL=styles.critical.css.map */
+.node--view-mode-teaser .field--name-body p {
+  margin-top: 0; }
+
+footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  background-color: #222222;
+  color: #fefefe;
+  padding: 1.5em 0; }
+
+.region-footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.block {
+  /* Block wrapper */
+  margin-bottom: 1.5em; }
+
+.block-title {
+  font-size: 1.5em;
+  line-height: 1.5em; }
+
+.region-footer .block-title {
+  color: #fefefe; }
+
+#block-googlemapfullwidth {
+  position: absolute;
+  height: 359px;
+  top: 2em;
+  left: 0;
+  right: 0; }
+
+.gm-style {
+  color: #444444; }
+  .gm-style img {
+    max-width: inherit; }
+
+.map-marker-info .title {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: 0.375em;
+  margin-bottom: 0em;
+  font-weight: bold; }
+
+.map-marker-info p {
+  font-size: 1rem;
+  margin-top: 0.375em;
+  margin-bottom: 0.375em; }
+
+.map-marker-info .map-marker-meta {
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #777777;
+  margin-top: 0.375em;
+  margin-bottom: 0.375em; }
+
+.block-contact-block {
+  background-color: #222222;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: relative;
+  z-index: 10; }
+  .block-contact-block .block-title {
+    margin-top: 0em;
+    position: relative; }
+    .block-contact-block .block-title:before {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+      /* you can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+      content: '\E800';
+      position: absolute;
+      font-size: 2em;
+      right: 0;
+      top: -0.1em;
+      color: rgba(255, 255, 255, 0.05);
+      -webkit-transform: rotate(19deg);
+      text-shadow: 0 -1px 0 #111;
+      z-index: -1; }
+  .block-contact-block .form-item {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 1em; }
+    .block-contact-block .form-item input,
+    .block-contact-block .form-item textarea {
+      position: relative;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      background: #3c3c3c;
+      color: #fefefe; }
+      .block-contact-block .form-item input:focus,
+      .block-contact-block .form-item textarea:focus {
+        z-index: 10; }
+    .block-contact-block .form-item textarea {
+      height: 8.5em; }
+  .block-contact-block label {
+    display: block;
+    margin-left: 1em;
+    line-height: 1;
+    font-weight: 300;
+    font-weight: normal;
+    color: #777777;
+    position: absolute;
+    top: 0.75em;
+    z-index: 1;
+    pointer-events: none; }
+  .block-contact-block .form-actions {
+    text-align: right; }
+    .block-contact-block .form-actions .button:last-child {
+      margin-right: 0; }
+  @media (min-width: 38.75em) and (max-width: 59.99em) {
+    .block-contact-block {
+      width: 50%; } }
+  @media (min-width: 60em) {
+    .block-contact-block {
+      width: calc(1200px / 3); } }
+
+.field--name-field-tags .field__item,
+.field--name-field-category .field__item {
+  text-transform: uppercase;
+  background: #dddddd;
+  font-size: 0.75em;
+  line-height: 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em; }
+  .field--name-field-tags .field__item a:link,
+  .field--name-field-category .field__item a:link, .field--name-field-tags .field__item a:visited,
+  .field--name-field-category .field__item a:visited {
+    color: #444444;
+    padding: 1em 1em 0.95em;
+    display: block; }
+  .field--name-field-tags .field__item a:hover,
+  .field--name-field-category .field__item a:hover {
+    background: #eebb00; }
+  .field--name-field-tags .field__item a.active,
+  .field--name-field-category .field__item a.active {
+    color: #444444; }
+
+.field--name-field-tags,
+.field--name-field-category {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: start;
+      align-items: flex-start; }
+
+.group-meta {
+  background: #fefefe;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 1.5em 1.5em;
+  margin-bottom: 2em;
+  overflow: hidden; }
+  .group-meta p:first-child {
+    margin-top: 0; }
+  .group-meta .group-tags {
+    margin-bottom: 1em;
+    overflow: hidden; }
+
+.node--view-mode-teaser .field--name-field-category {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .node--view-mode-teaser .field--name-field-category .field__item {
+    background-color: white;
+    border-left: 3px solid #eebb00; }
+
+.field--name-field-link {
+  float: left;
+  clear: both;
+  display: inline-block;
+  text-align: center; }
+  .field--name-field-link .field__item {
+    margin-bottom: 0.5em; }
+  .field--name-field-link a {
+    background: #eebb00;
+    padding: 0.75em 1.5em;
+    border-radius: 10em;
+    color: #444444;
+    text-transform: uppercase;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    letter-spacing: 1px;
+    display: block; }
+    .field--name-field-link a:hover {
+      background-color: #ffdb55; }
+
+@media (min-width: 60em) {
+  .node--view-mode-full .field--name-field-primary-image {
+    float: right;
+    width: 70%; } }
+
+@media (min-width: 60em) {
+  .field--name-field-image {
+    float: right;
+    width: 70%; } }
+
+@media print {
+  a:link,
+  a:visited {
+    /* underline all links */
+    text-decoration: underline !important; }
+    #site-name a:link, #site-name
+    a:visited {
+      /* Don't underline header */
+      text-decoration: none !important; }
+  #content a[href]:after {
+    /* Add visible URL after links. */
+    content: " (" attr(href) ")";
+    font-weight: normal;
+    font-size: 16px; }
+  #content a[href^="javascript:"]:after,
+  #content a[href^="#"]:after {
+    /* Only display useful links. */
+    content: ""; }
+  #content abbr[title]:after {
+    /* Add visible title after abbreviations. */
+    content: " (" attr(title) ")"; }
+  #content {
+    /* Un-float the content */
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important; }
+  body,
+  #page,
+  #main,
+  #content {
+    /* Turn off any background colors or images */
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important; }
+  #skip-link,
+  #toolbar,
+  #navigation,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  #footer,
+  .breadcrumb,
+  .tabs,
+  .action-links,
+  .links,
+  .book-navigation,
+  .forum-topic-navigation,
+  .pager,
+  .feed-icons {
+    /* Hide sidebars and nav elements */
+    visibility: hidden;
+    display: none; } }
+
+/* End @media print */</style></head>
+  <body style="">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="layout-container"><header><div class="region region-header"><div id="block-chriskinch-branding" class="block block-system block-system-branding-block"><a href="http://localhost:3000/" title="Home" rel="home" class="site-logo"><img src="data:image/png;base64,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" alt="chriskinch.com logo"></a><div class="site-name"><a href="http://localhost:3000/" title="Home" rel="home">chriskinch.com</a></div><div class="site-slogan">Hello. I'm Chris Kinch. Designer, developer, Drupal themer &amp; all-round geek.</div></div></div></header><div class="region region-primary-menu"><nav class="menu"><a class="menu-item" href="http://localhost:3000/">Portfolio</a><a class="menu-item" href="http://localhost:3000/#footer">About</a><a class="menu-item" href="http://localhost:3000/#footer">Contact</a><a class="menu-item" href="http://www.linkedin.com/profile/view?id=111572824">CV</a></nav><ul class="menu"><li class="menu-item"><a href="http://www.linkedin.com/profile/view?id=111572824" class="menu-linkedin" target="_blank" rel="noopener noreferrer">Linkedin</a></li><li class="menu-item"><a href="https://github.com/chriskinch" class="menu-github" target="_blank" rel="noopener noreferrer">GitHub</a></li><li class="menu-item"><a href="http://www.facebook.com/iamchriskinch" class="menu-facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li><li class="menu-item"><a href="https://plus.google.com/+ChrisKinch/posts" class="menu-google" target="_blank" rel="noopener noreferrer">Google+</a></li><li class="menu-item"><a href="https://twitter.com/chriskinch" class="menu-twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li></ul></div><div class="layout-content"><div class="region region-content"><div id="block-chriskinch-page-title" class="block block-core block-page-title-block"><h1 class="page-title">My new title</h1></div><div id="block-chriskinch-content" class="block block-system block-system-main-block"><div class="views-element-container"><div class="view view-frontpage view-id-frontpage"><div class="view-content"><div class="views-row"><article class="node node--type-article node--promoted node--view-mode-teaser"><h2 class="node--title"><a href="http://localhost:3000/node/1">Last.fm widget</a></h2><div class="field field--name-field-teaser-image field--type-image field--label-hidden field__item"><a href="http://localhost:3000/node/1"><img src="./React App_files/lastfm_teaser.png" width="500" height="500" alt="Pixel Percolator logo" typeof="foaf:Image" class="image-style-scale-crop-500"></a></div><div><p>A while back I wanted to give OAuth 2.0 a try and this little widget was the result of several hours of experimentation.</p>
+
+<p>The final product is a configurable visualisation of my resent top albums complete with a live feed of tracks currently being played.</p>
+
+<p>At some point I would love to spend some time on refinement but for now the code is pasted here and open source.</p>
+</div></article></div><div class="views-row"><article class="node node--type-article node--promoted node--view-mode-teaser"><h2 class="node--title"><a href="http://localhost:3000/node/2">My Tea Box logo</a></h2><div class="field field--name-field-teaser-image field--type-image field--label-hidden field__item"><a href="http://localhost:3000/node/2"><img src="./React App_files/myteabox_buscard.png" width="500" height="500" alt="Pixel Percolator logo" typeof="foaf:Image" class="image-style-scale-crop-500"></a></div><div><p>A logo concept for the My Tea Box brand (still in development).</p>
+</div></article></div><div class="views-row"><article class="node node--type-article node--promoted node--view-mode-teaser"><h2 class="node--title"><a href="http://localhost:3000/node/3">Mens Fitness - Responsive redesign</a></h2><div class="field field--name-field-teaser-image field--type-image field--label-hidden field__item"><a href="http://localhost:3000/node/3"><img src="./React App_files/mensfitness-teaser.png" width="500" height="500" alt="Pixel Percolator logo" typeof="foaf:Image" class="image-style-scale-crop-500"></a></div><div><p>Mobile first redesign, showcased as Dennis Publishings first fully responsive production site.</p>
+</div></article></div><div class="views-row"><article class="node node--type-article node--promoted node--view-mode-teaser"><h2 class="node--title"><a href="http://localhost:3000/node/4">Pixel Percolator logo</a></h2><div class="field field--name-field-teaser-image field--type-image field--label-hidden field__item"><a href="http://localhost:3000/node/4"><img src="./React App_files/pixel_percolator_logo.png" width="500" height="500" alt="Pixel Percolator logo" typeof="foaf:Image" class="image-style-scale-crop-500"></a></div><div><p>A quick logo that I threw together for the Dennis Publishing design/development community that I manage over on Google+.</p>
+</div></article></div></div></div></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="./React App_files/bundle.js"></script>
+
+</body></html>

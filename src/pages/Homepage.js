@@ -33,7 +33,6 @@ export default class Homepage extends Component {
     let TeaserComponents = [];
     if(articles) {
       TeaserComponents = articles.map((article) => {
-        console.log(article);
         return <Teaser key={article.id} {...article}/>;
       });
     }
