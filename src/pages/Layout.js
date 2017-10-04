@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import Nav from "../components/layout/Nav";
 import Social from "../components/Social";
@@ -20,14 +21,17 @@ export default class Layout extends Component {
           <Nav />
           <Social />
         </div>
-        <div className="layout-content">
-          <div className="region region-content">
-            { TitleComponent }
-            <div id="block-chriskinch-content" className="block block-system block-system-main-block">
-              { this.props.children }
+        <main>
+          <div className="layout-content">
+            <div className="region region-content">
+              { TitleComponent }
+              <div id="block-chriskinch-content" className="block block-system block-system-main-block">
+                { this.props.children }
+              </div>
             </div>
           </div>
-        </div>
+        </main>
+        <Footer />
       </div>
     );
   }
