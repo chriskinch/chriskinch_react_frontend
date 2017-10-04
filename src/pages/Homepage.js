@@ -11,7 +11,7 @@ export default class Homepage extends Component {
     this.state = {
       articles: []
     }
-    AppActions.loadTodos();
+    AppActions.loadArticles(process.env.REACT_APP_ARTCILE_API_URL);
   }
 
   componentWillMount() {
@@ -24,7 +24,7 @@ export default class Homepage extends Component {
 
   getArticles() {
     this.setState({
-      articles: AppStore.getAll(),
+      articles: AppStore.getAll('articles'),
     });
   }
 

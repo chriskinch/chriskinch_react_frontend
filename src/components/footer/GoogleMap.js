@@ -27,7 +27,7 @@ export default class GoogleMap extends Component {
     });
 
     var place_request = {
-      reference: 'CoQBdgAAAAU45juchY7wYQURE_I7hbmGYmsVyj0BpyU2Nf8pEqls5DDgdC7TpeTVXXKsji7NxkPHaJGZ2C_65ScgSGdbQEAEHeiPNwCYErY7uac0chiyZsyaYZ97h_e25RDDDxtTsFg3In4SJgAeJg2Zr4CkGIMR2jd0F5x64BcbSUhcwz1cEhB0qN5OyiWuv5Y8GEjTW19OGhQw4qWDSniHnnSlGl5VRmgruvYtNA'
+      placeId: 'ChIJE0OZ0ysbdkgRDSUbs0uheG8'
     };
 
     var service = new google.maps.places.PlacesService(map);
@@ -40,9 +40,9 @@ export default class GoogleMap extends Component {
         });
                 
         var contentString = '<div class="map-marker-info">'+
-        '<h4 class="title">'+ place.name +'</h4>'+
+        '<h4 class="title">Chris Kinch @ '+ place.name +'</h4>'+
         '<p class="map-marker-meta">'+ place.vicinity +'</p>'+
-        '<p>Current workplace and second home of Chris Kinch. Resident since August 2008. Kind of a big deal at the local pub.</p>'+
+        '<p>Current workplace and second home of Chris Kinch. Resident since August 2008. Coding as we speak.</p>'+
         '</div>';
 
         infowindow.setContent(contentString);

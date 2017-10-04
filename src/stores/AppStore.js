@@ -6,10 +6,11 @@ class AppStore extends EventEmitter {
   constructor() {
     super()
     this.articles = [];
+    this.blocks = [];
   }
 
-  getAll() {
-    return this.articles;
+  getAll(type) {
+    return this[type];
   }
 
   processImages() {
@@ -36,8 +37,13 @@ class AppStore extends EventEmitter {
   handleActions(action) {
     switch(action.type) {
       case "RECEIVE_ARTICLES": {
-        this.articles = action.articles;
+        this.articles = action.data;
         this.processImages();
+        this.emit("change");
+        break;
+      }
+      case "RECEIVE_BLOCKS": {
+        this.blocks = action.data;
         this.emit("change");
         break;
       }
