@@ -11,7 +11,7 @@ export default class Homepage extends Component {
     this.state = {
       articles: []
     }
-    AppActions.loadArticles(process.env.REACT_APP_ARTCILE_API_URL);
+    AppActions.loadArticles(process.env.REACT_APP_ARTCILE_COLLECTION_API_URL);
   }
 
   componentWillMount() {

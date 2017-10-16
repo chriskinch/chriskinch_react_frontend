@@ -5,26 +5,33 @@ import dispatcher from '../dispatcher';
 class AppStore extends EventEmitter {
   constructor() {
     super()
-    this.articles = [];
-    this.blocks = [];
+    this.store = [];
   }
 
   getAll(type) {
-    return this[type];
+    return this.store[type];
+  }
+
+  getTitle(){
+    let title = null;
+    if(this.store.node) {
+      title = this.store.node.data.attributes.title;
+    }
+    return title;
   }
 
   processImages() {
-    const data = this.articles.data;
+    const data = this.store.articles.data;
     for(let i=0; i<data.length; i++){
       let { field_primary_image, field_teaser_image } = data[i].relationships;
       if(!field_teaser_image.data) {
-        this.articles.data[i].relationships.field_teaser_image = field_primary_image;
+        this.store.articles.data[i].relationships.field_teaser_image = field_primary_image;
       }
     }
   }
 
-  getInclude(ref) {
-    const included = this.articles.included;
+  getInclude(ref, type) {
+    const included = this.store[type].included;
     let lookup = _.find(included, ref);
 
     // console.log(included);
@@ -37,13 +44,13 @@ class AppStore extends EventEmitter {
   handleActions(action) {
     switch(action.type) {
       case "RECEIVE_ARTICLES": {
-        this.articles = action.data;
+        this.store.articles = action.data;
         this.processImages();
         this.emit("change");
         break;
       }
-      case "RECEIVE_BLOCKS": {
-        this.blocks = action.data;
+      case "RECEIVE_NODE": {
+        this.store.node = action.data;
         this.emit("change");
         break;
       }

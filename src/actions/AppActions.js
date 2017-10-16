@@ -8,9 +8,9 @@ export function loadArticles(api_url) {
   loadAPI(base_url + api_url, "RECEIVE_ARTICLES");
 }
 
-export function loadBlocks(api_url) {
-  dispatcher.dispatch({type: "LOADING_BLOCKS"});
-  loadAPI(base_url + api_url, "RECEIVE_BLOCKS");
+export function loadNode(api_url) {
+  dispatcher.dispatch({type: "LOADING_NODE"});
+  loadAPI(base_url + api_url, "RECEIVE_NODE");
 }
 
 export function loadAPI(url, action) {

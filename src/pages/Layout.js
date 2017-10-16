@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
+import AppStore from "../stores/AppStore";
+
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import Nav from "../components/layout/Nav";
 import Social from "../components/Social";
 import Title from "../components/Title";
-import * as AppActions from "../actions/AppActions";
-import AppStore from "../stores/AppStore";
 
 import "../css/styles.critical.css";
 import "../css/styles.noncritical.css";
@@ -14,32 +14,37 @@ import "../css/styles.noncritical.css";
 export default class Layout extends Component {
   constructor(){
     super();
-
-    this.getBlocks = this.getBlocks.bind(this);
+    this.getTitle = this.getTitle.bind(this);
     this.state = {
-      blocks: []
+      title: null
     }
-    AppActions.loadBlocks(process.env.REACT_APP_BLOCK_API_URL);
   }
 
   componentWillMount() {
-    AppStore.on("change", this.getBlocks);
+    AppStore.on("change", this.getTitle);
   }
 
   componentWillUnmount() {
-    AppStore.removeListener("change", this.getBlocks);
+    AppStore.removeListener("change", this.getTitle);
+    this.clearTitle.bind(this);
   }
 
-  getBlocks() {
+  getTitle() {
     this.setState({
-      blocks: AppStore.getAll('blocks'),
+      title: AppStore.getTitle()
+    });
+  }
+
+  clearTitle() {
+    this.setState({
+      title: null
     });
   }
 
   render() {
-    console.log("BLOCKS:", this.state.blocks);
     const { location } = this.props;
-    const TitleComponent = (location.pathname !== '/') ? <Title /> : null
+    const { title } = this.state;
+    const TitleComponent = (location.pathname !== '/') ? <Title title= { title } /> : null
 
     return (
       <div className="layout-container">
