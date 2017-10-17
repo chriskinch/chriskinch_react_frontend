@@ -5,10 +5,9 @@ import PrimaryImage from './node/PrimaryImage'
 import ProjectLink from './node/ProjectLink'
 import Tag from './Tag';
 
-import AppStore from "../stores/AppStore";
-
 export default class Node extends Component {
   render() {
+    //console.log(this.props)
     const base_url = process.env.REACT_APP_API_BASE_URL;
     const { node } = this.props;
 
@@ -18,13 +17,13 @@ export default class Node extends Component {
     const { field_category, field_tags, field_primary_image, field_image } = relationships;
     
     const CategoryComponents = field_category.data.map((category) => {
-      let mapped_category = AppStore.getInclude({'id': category.id}, 'node');
-      return <Tag key={category.id} data={ mapped_category } {...category}/>;
+      return <Tag key={category.id} {...category}/>;
     });
+
     const TagComponents = field_tags.data.map((tags) => {
-      let mapped_tags = AppStore.getInclude({'id': tags.id}, 'node');
-      return <Tag key={tags.id} data={ mapped_tags } {...tags}/>;
+      return <Tag key={tags.id} {...tags}/>;
     });
+
     let ProjectLinkComponents = [];
     if(field_link) {
       ProjectLinkComponents = field_link.map((link, i) => {
@@ -32,12 +31,10 @@ export default class Node extends Component {
       });
     }
 
-    const mapped_primary_image = AppStore.getInclude({'id': field_primary_image.data.id}, 'node');
-    const primary_image_url = base_url + mapped_primary_image.attributes.url;
+    const primary_image_url = base_url + field_primary_image.data.attributes.url;
 
     const ImageComponents = field_image.data.map((image) => {
-      let mapped_images = AppStore.getInclude({'id': image.id}, 'node');
-      return <Image key={image.id} data={ mapped_images } {...image}/>;
+      return <Image key={ image.id } {...image}/>;
     });
 
     return (

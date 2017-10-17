@@ -30,14 +30,31 @@ class AppStore extends EventEmitter {
     }
   }
 
+  processRelationships(obj, type) {
+    const { relationships } = obj.data;
+    if(relationships) {
+      for (var key in relationships) {
+        let { data } = relationships[key];
+        let location;
+        let include;
+        if(!data.length){
+          location = obj.data.relationships[key].data;
+          include = this.getInclude({'id': data.id}, type);
+          Object.assign(location, include);
+        }else{
+          for(let i=0; i<data.length; i++){
+            location = obj.data.relationships[key].data[i];
+            include = this.getInclude({'id': data[i].id}, type);
+            Object.assign(location, include);
+          }
+        }
+      }
+    }
+  }
+
   getInclude(ref, type) {
     const included = this.store[type].included;
     let lookup = _.find(included, ref);
-
-    // console.log(included);
-    // console.log(ref);
-    // console.log(lookup);
-
     return lookup;
   }
 
@@ -51,6 +68,7 @@ class AppStore extends EventEmitter {
       }
       case "RECEIVE_NODE": {
         this.store.node = action.data;
+        this.processRelationships(this.store.node, 'node');
         this.emit("change");
         break;
       }

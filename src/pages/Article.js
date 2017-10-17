@@ -28,6 +28,7 @@ export default class Article extends Component {
       node: AppStore.getAll('node'),
       complete: true
     });
+    
   }
 
   render() {

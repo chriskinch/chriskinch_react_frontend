@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class Image extends Component {
   render() {
   	const base_url = process.env.REACT_APP_API_BASE_URL;
-    const { meta, data } = this.props;
-    const { url } = data.attributes;
+    const { meta, attributes} = this.props;
+    const { url } = attributes;
     const { alt, title } = meta;
     const image_url = base_url + url;
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Tag extends Component {
   render() {
-    const { name } = this.props.data.attributes;
+    const { name } = this.props.attributes;
 
     return (
       <li className="field__item">
