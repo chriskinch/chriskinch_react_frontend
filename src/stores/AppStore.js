@@ -37,15 +37,18 @@ class AppStore extends EventEmitter {
         let { data } = relationships[key];
         let location;
         let include;
-        if(!data.length){
-          location = obj.data.relationships[key].data;
-          include = this.getInclude({'id': data.id}, type);
-          Object.assign(location, include);
-        }else{
-          for(let i=0; i<data.length; i++){
-            location = obj.data.relationships[key].data[i];
-            include = this.getInclude({'id': data[i].id}, type);
+        if(data) {
+          if(data.length === undefined){
+            location = obj.data.relationships[key].data;
+            include = this.getInclude({'id': data.id}, type);
             Object.assign(location, include);
+          }
+          if(data.length > 0){
+            for(let i=0; i<data.length; i++){
+              location = obj.data.relationships[key].data[i];
+              include = this.getInclude({'id': data[i].id}, type);
+              Object.assign(location, include);
+            }
           }
         }
       }

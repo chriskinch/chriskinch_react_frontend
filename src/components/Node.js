@@ -7,35 +7,34 @@ import Tag from './Tag';
 
 export default class Node extends Component {
   render() {
-    //console.log(this.props)
     const base_url = process.env.REACT_APP_API_BASE_URL;
     const { node } = this.props;
-
     const { attributes, relationships } = node.data;
-    const { body, field_link } = attributes;
-    
+    const { body, field_link } = attributes;  
     const { field_category, field_tags, field_primary_image, field_image } = relationships;
-    
-    const CategoryComponents = field_category.data.map((category) => {
-      return <Tag key={category.id} {...category}/>;
-    });
+    const primary_image_url = base_url + field_primary_image.data.attributes.url;
+    let CategoryComponents, TagComponents, ProjectLinkComponents, ImageComponents = [];
 
-    const TagComponents = field_tags.data.map((tags) => {
-      return <Tag key={tags.id} {...tags}/>;
-    });
-
-    let ProjectLinkComponents = [];
+    if(field_category) {
+      CategoryComponents = field_category.data.map((category) => {
+        return <Tag key={category.id} {...category}/>;
+      });
+    }
+    if(field_tags) {
+      TagComponents = field_tags.data.map((tags) => {
+        return <Tag key={tags.id} {...tags}/>;
+      });
+    }
     if(field_link) {
       ProjectLinkComponents = field_link.map((link, i) => {
         return <ProjectLink key={ i } {...link}/>;
       });
     }
-
-    const primary_image_url = base_url + field_primary_image.data.attributes.url;
-
-    const ImageComponents = field_image.data.map((image) => {
-      return <Image key={ image.id } {...image}/>;
-    });
+    if(field_image) {
+      ImageComponents = field_image.data.map((image) => {
+        return <Image key={ image.id } {...image}/>;
+      });
+    }
 
     return (
       <article className="contextual-region node node--type-article node--promoted node--view-mode-full">
