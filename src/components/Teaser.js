@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AppStore from "../stores/AppStore";
 import TeaserImage from './teaser/TeaserImage';
 import Tag from './Tag';
 import { Link } from 'react-router';
@@ -11,18 +10,20 @@ export default class Teaser extends Component {
     const { attributes, relationships } = this.props;
     const { uuid, title, body } = attributes;
     const { field_category, field_tags, field_teaser_image } = relationships;
+    const teaser_image_url = base_url + field_teaser_image.data.attributes.url;
     const node_path = "/node/" + uuid;
-
-    const CategoryComponents = field_category.data.map((category) => {
-      let mapped_category = AppStore.getInclude({'id': category.id}, 'articles');
-      return <Tag key={category.id} attributes={ mapped_category.attributes } {...category}/>;
-    });
-    const TagComponents = field_tags.data.map((tags) => {
-      let mapped_tags = AppStore.getInclude({'id': tags.id}, 'articles');      
-      return <Tag key={tags.id} attributes={ mapped_tags.attributes } {...tags}/>;
-    });
-    const mapped_teaser_image = AppStore.getInclude({'id': field_teaser_image.data.id}, 'articles');
-    const teaser_image_url = base_url + mapped_teaser_image.attributes.url;
+    
+    let CategoryComponents, TagComponents = [];
+    if(field_category) {
+      CategoryComponents = field_category.data.map((category) => {
+        return <Tag key={category.id} {...category}/>;
+      });
+    }
+    if(field_tags) {
+      TagComponents = field_tags.data.map((tags) => {   
+        return <Tag key={tags.id} {...tags}/>;
+      });
+    }
 
     return (
       <div className="views-row">

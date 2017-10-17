@@ -13,8 +13,8 @@ export default class Node extends Component {
     const { body, field_link } = attributes;  
     const { field_category, field_tags, field_primary_image, field_image } = relationships;
     const primary_image_url = base_url + field_primary_image.data.attributes.url;
+    
     let CategoryComponents, TagComponents, ProjectLinkComponents, ImageComponents = [];
-
     if(field_category) {
       CategoryComponents = field_category.data.map((category) => {
         return <Tag key={category.id} {...category}/>;
