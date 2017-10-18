@@ -4,14 +4,14 @@ import Teaser from "../components/Teaser";
 import * as AppActions from "../actions/AppActions";
 import AppStore from "../stores/AppStore";
 
-export default class Homepage extends Component {
+export default class Collection extends Component {
   constructor(){
     super();
     this.getArticles = this.getArticles.bind(this);
     this.state = {
       articles: []
     }
-    AppActions.loadArticles(process.env.REACT_APP_ARTCILE_COLLECTION_API_URL);
+    AppActions.loadCollection(process.env.REACT_APP_ARTCILE_COLLECTION_API_URL);
   }
 
   componentWillMount() {

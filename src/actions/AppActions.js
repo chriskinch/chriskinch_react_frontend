@@ -3,9 +3,9 @@ import axios from "axios";
 
 const base_url = process.env.REACT_APP_API_BASE_URL;
 
-export function loadArticles(api_url) {
-  dispatcher.dispatch({type: "LOADING_ARTICLES"});
-  loadAPI(base_url + api_url, "RECEIVE_ARTICLES");
+export function loadCollection(api_url) {
+  dispatcher.dispatch({type: "LOADING_COLLECTION"});
+  loadAPI(base_url + api_url, "RECEIVE_COLLECTION");
 }
 
 export function loadNode(api_url) {

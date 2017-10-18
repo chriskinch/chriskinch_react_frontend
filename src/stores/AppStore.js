@@ -63,7 +63,7 @@ class AppStore extends EventEmitter {
 
   handleActions(action) {
     switch(action.type) {
-      case "RECEIVE_ARTICLES": {
+      case "RECEIVE_COLLECTION": {
         this.store.articles = action.data;
         this.processImages();
         for(let i=0; i<this.store.articles.data.length; i++){

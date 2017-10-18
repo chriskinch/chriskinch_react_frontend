@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import { Router, Route, IndexRoute, hashHistory } from "react-router";
 
-import Homepage from "./pages/Homepage";
+import Collection from "./pages/Collection";
 import Layout from "./pages/Layout";
-import Article from "./pages/Article";
+import Page from "./pages/Page";
 
 const app = document.getElementById('root');
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Layout}>
-      <IndexRoute component={Homepage}></IndexRoute>
-      <Route path="node(/:uuid)" name="article" component={Article}></Route>
+      <IndexRoute component={Collection}></IndexRoute>
+      <Route path="node(/:uuid)" name="page" component={Page}></Route>
     </Route>
   </Router>,
 app);

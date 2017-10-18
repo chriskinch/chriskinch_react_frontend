@@ -5,7 +5,7 @@ import AppStore from "../stores/AppStore";
 
 import Node from '../components/Node';
 
-export default class Article extends Component {
+export default class Page extends Component {
   constructor(){
     super();
     this.getNode = this.getNode.bind(this);
