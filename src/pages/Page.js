@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import * as AppActions from "../actions/AppActions";
 import AppStore from "../stores/AppStore";
-
 import Node from '../components/Node';
 
 export default class Page extends Component {

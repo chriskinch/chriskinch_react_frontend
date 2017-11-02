@@ -55,10 +55,6 @@ footer {
   /* Block wrapper */
   margin-bottom: 1.5em; }
 
-.block-title {
-  font-size: 1.5em;
-  line-height: 1.5em; }
-
 .region-footer .block-title {
   color: #fefefe; }
 
@@ -75,23 +71,15 @@ footer {
     max-width: inherit; }
 
 .map-marker-info .title {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  margin-top: 0.375em;
-  margin-bottom: 0em;
   font-weight: bold; }
 
 .map-marker-info p {
-  font-size: 1rem;
-  margin-top: 0.375em;
-  margin-bottom: 0.375em; }
+  font-size: 1rem; }
 
 .map-marker-info .map-marker-meta {
   font-style: italic;
   font-size: 0.875rem;
-  color: #777777;
-  margin-top: 0.375em;
-  margin-bottom: 0.375em; }
+  color: #777777; }
 
 .block-contact-block {
   background-color: #222222;
@@ -100,7 +88,6 @@ footer {
   position: relative;
   z-index: 10; }
   .block-contact-block .block-title {
-    margin-top: 0em;
     position: relative; }
     .block-contact-block .block-title:before {
       font-family: "fontello";
@@ -233,10 +220,6 @@ footer {
     border-radius: 10em;
     color: #444444;
     text-transform: uppercase;
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
-    -o-transition: background-color 0.3s;
-    transition: background-color 0.3s;
     letter-spacing: 1px;
     display: block; }
     .field--name-field-link a:hover {
@@ -306,6 +289,3 @@ footer {
     display: none; } }
 
 /* End @media print */
-
-/*# sourceMappingURL=styles.noncritical.css.map */
-/*# sourceMappingURL=styles.noncritical.css.map */

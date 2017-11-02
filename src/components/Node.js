@@ -41,10 +41,10 @@ export default class Node extends Component {
         <div className="group-meta">
           <div dangerouslySetInnerHTML={{__html: body.value }} className="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item quickedit-field"></div>
           <div className="group-tags">
-            <ul className="field field--name-field-category field--type-entity-reference field--label-hidden field__items">
+            <ul className="field field--name-field-category field__items">
               { CategoryComponents }
             </ul>
-            <ul className="field field--name-field-tags field--type-entity-reference field--label-hidden field__items">
+            <ul className="field field--name-field-tags field__items">
               { TagComponents }
             </ul>
           </div>

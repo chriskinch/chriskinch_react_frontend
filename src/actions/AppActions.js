@@ -13,10 +13,16 @@ export function loadNode(api_url) {
   loadAPI(base_url + api_url, "RECEIVE_NODE");
 }
 
+export function loadAny(api_url) {
+  loadAPI(api_url, "HELLO");
+}
+
 export function loadAPI(url, action) {
   console.log(url);
   axios(url).then((response) => {
-    //console.log(response);
+    if(action === "HELLO"){
+      console.log(response);
+    }
     dispatcher.dispatch({type: action, data: response.data});
   }).catch((error) => {
     console.log("Somethings wrong:", error);

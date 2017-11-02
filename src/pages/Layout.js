@@ -8,8 +8,8 @@ import Nav from "../components/layout/Nav";
 import Social from "../components/Social";
 import Title from "../components/Title";
 
-import "../css/styles.critical.css";
-import "../css/styles.noncritical.css";
+import "../sass/styles.critical.css";
+import "../sass/styles.noncritical.css";
 
 export default class Layout extends Component {
   constructor(){

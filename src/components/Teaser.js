@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TeaserImage from './teaser/TeaserImage';
-import Tag from './Tag';
 import { Link } from 'react-router';
+import Tag from './Tag';
+import TeaserImage from './teaser/TeaserImage';
 
 export default class Teaser extends Component {
 
@@ -32,11 +32,11 @@ export default class Teaser extends Component {
             <Link to={ node_path }>{ title }</Link>
           </h2>
           <TeaserImage url={ teaser_image_url } meta={ field_teaser_image.data.meta } path={ node_path } />
-          <ul className="field field--name-field-category field--type-entity-reference field--label-hidden field__items quickedit-field">
+          <ul className="field field--name-field-category field__items">
             { CategoryComponents }
           </ul>
           <div className="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item quickedit-field" dangerouslySetInnerHTML={{__html: body.value }}></div>
-          <ul className="field field--name-field-tags field--type-entity-reference field--label-hidden field__items quickedit-field">
+          <ul className="field field--name-field-tags field__items">
             { TagComponents }
           </ul>
         </article>

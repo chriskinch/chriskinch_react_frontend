@@ -12,6 +12,8 @@ export default class Collection extends Component {
       articles: []
     }
     AppActions.loadCollection(process.env.REACT_APP_ARTCILE_COLLECTION_API_URL);
+
+    AppActions.loadAny("http://chriskinch/admin@chriskinch.com.drupal-8.x.dev/jsonapi/entity_view_display/entity_view_display");
   }
 
   componentWillMount() {
