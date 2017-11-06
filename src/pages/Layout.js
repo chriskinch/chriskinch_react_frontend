@@ -48,10 +48,10 @@ export default class Layout extends Component {
 
     return (
       <div className="layout-container">
-        <Header />
+        {/* <Header /> */}
         <div className="region region-primary-menu">
-          <Nav />
-          <Social />
+          {/* <Nav /> */}
+          {/* <Social /> */}
         </div>
         <main>
           <div className="layout-content">
@@ -63,7 +63,7 @@ export default class Layout extends Component {
             </div>
           </div>
         </main>
-        <Footer />
+        {/*<Footer />*/}
       </div>
     );
   }

@@ -4,7 +4,11 @@ import Teaser from "../components/Teaser";
 import * as AppActions from "../actions/AppActions";
 import AppStore from "../stores/AppStore";
 
-export default class Collection extends Component {
+import gql from 'graphql-tag';
+import { graphql } from 'react-apollo';
+import Temp from "./Temp";
+
+class Collection extends Component {
   constructor(){
     super();
     this.getArticles = this.getArticles.bind(this);
@@ -12,8 +16,6 @@ export default class Collection extends Component {
       articles: []
     }
     AppActions.loadCollection(process.env.REACT_APP_ARTCILE_COLLECTION_API_URL);
-
-    AppActions.loadAny("http://chriskinch/admin@chriskinch.com.drupal-8.x.dev/jsonapi/entity_view_display/entity_view_display");
   }
 
   componentWillMount() {
@@ -31,6 +33,16 @@ export default class Collection extends Component {
   }
 
   render() {
+    const Teasers = [{
+      id: '1',
+      description: 'The Coolest GraphQL Backend 😎',
+      url: 'https://www.graph.cool'
+    }, {
+      id: '2',
+      description: 'The Best GraphQL Client',
+      url: 'http://dev.apollodata.com/'
+    }]
+
     const articles = this.state.articles.data;
     let TeaserComponents = [];
     if(articles) {
@@ -43,7 +55,9 @@ export default class Collection extends Component {
       <div className="views-element-container">
         <div className="view view-frontpage view-id-frontpage">
           <div className="view-content">
-            { TeaserComponents }
+            { Teasers.map(article => (
+              <Temp key={article.id} {...article}/>
+            ))}
           </div>
         </div>
       </div>
@@ -51,4 +65,17 @@ export default class Collection extends Component {
   }
 }
 
+export default Collection
 
+// const ALL_LINKS_QUERY = gql`
+//   query AllLinksQuery {
+//     allLinks {
+//       id
+//       createdAt
+//       url
+//       description
+//     }
+//   }
+// `
+
+// export default graphql(ALL_LINKS_QUERY, { name: 'allLinksQuery' }) (Collection)
