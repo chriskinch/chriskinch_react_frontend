@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GoogleMap from '../footer/GoogleMap';
+import GoogleMap from 'components/footer/GoogleMap';
 
 export default class Footer extends Component {
   render() {

@@ -1,4 +1,7 @@
-{
+import gql from 'graphql-tag';
+
+export const Example = gql`query example {
+  __typename
   nodeQuery(filter:{status:true}) {
     entities {
       entityLabel
@@ -94,4 +97,4 @@
       }
     }
   }
-}
+}`

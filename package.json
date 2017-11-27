@@ -26,7 +26,8 @@
     "build-css": "node-sass-chokidar src/ -o src/ --include-path ./node_modules/sass-mq",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive --include-path ./node_modules/sass-mq",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "build-fragment": "node src/fragmentTypeQuery.js",
+    "start": "npm-run-all -p build-fragment watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

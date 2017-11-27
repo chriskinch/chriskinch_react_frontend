@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Temp extends Component {
   render() {
-    console.log(this);
+    //console.log(this.props);
     const { description } = this.props;
     return (
       <div className="views-row">

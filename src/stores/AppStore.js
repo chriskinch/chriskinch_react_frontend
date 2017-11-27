@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 import _ from 'lodash';
-import dispatcher from '../dispatcher';
+import dispatcher from 'dispatcher';
 
 class AppStore extends EventEmitter {
   constructor() {

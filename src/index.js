@@ -11,20 +11,25 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
-import gql from 'graphql-tag';
 
-import { HomePosts } from './config/homepage.graphql.js';
+import { IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
+import introspectionQueryResultData from './fragmentTypes.json';
 
-console.log(HomePosts);
+const fragmentMatcher = new IntrospectionFragmentMatcher({
+  introspectionQueryResultData
+});
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   link: new HttpLink({
     uri:'http://chriskinch.com.drupal-8.x.dev/graphql'
   }),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache({
+    fragmentMatcher
+  }),
+  dataIdFromObject: (result: Object) => {
+    return result.id
+  }
 });
-
-client.query({ query: HomePosts }).then(console.log);
 
 const app = document.getElementById('root');
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Image from './node/Image'
-import PrimaryImage from './node/PrimaryImage'
-import ProjectLink from './node/ProjectLink'
-import Tag from './Tag';
+import Image from 'components/node/Image'
+import PrimaryImage from 'components/node/PrimaryImage'
+import ProjectLink from 'components/node/ProjectLink'
+import Tag from 'components/Tag';
 
 export default class Node extends Component {
   render() {
