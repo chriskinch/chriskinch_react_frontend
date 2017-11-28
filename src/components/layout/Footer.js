@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import GoogleMap from '../footer/GoogleMap';
+import React from "react";
 
-export default class Footer extends Component {
+
+export default class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <div className="region region-footer">
-          <div id="block-googlemapfullwidth" className="block block-block-content block-block-content8c1e0e1f-2eb8-417c-86c0-0d8f5e02f65b">
-            <GoogleMap />
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; KillerNews.net</p>
           </div>
         </div>
       </footer>
