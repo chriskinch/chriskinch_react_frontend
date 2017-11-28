@@ -7,39 +7,35 @@ import Tag from 'components/Tag';
 
 export default class Node extends Component {
   render() {
-    const base_url = process.env.REACT_APP_API_BASE_URL;
-    const { node } = this.props;
-    const { attributes, relationships } = node.data;
-    const { body, field_link } = attributes;  
-    const { field_category, field_tags, field_primary_image, field_image } = relationships;
-    const primary_image_url = base_url + field_primary_image.data.attributes.url;
+    console.log(this.props)
+    const { body, links, categories, tags, primaryImage, images } = this.props;  
     
     let CategoryComponents, TagComponents, ProjectLinkComponents, ImageComponents = [];
-    if(field_category) {
-      CategoryComponents = field_category.data.map((category) => {
-        return <Tag key={category.id} {...category}/>;
+    if(categories) {
+      CategoryComponents = categories.map((category) => {
+        return <Tag key={category.entity.uuid} {...category.entity}/>;
       });
     }
-    if(field_tags) {
-      TagComponents = field_tags.data.map((tags) => {
-        return <Tag key={tags.id} {...tags}/>;
+    if(tags) {
+      TagComponents = tags.map((tag) => {
+        return <Tag key={tag.entity.uuid} {...tag.entity}/>;
       });
     }
-    if(field_link) {
-      ProjectLinkComponents = field_link.map((link, i) => {
+    if(links) {
+      ProjectLinkComponents = links.map((link, i) => {
         return <ProjectLink key={ i } {...link}/>;
       });
     }
-    if(field_image) {
-      ImageComponents = field_image.data.map((image) => {
-        return <Image key={ image.id } {...image}/>;
+    if(images) {
+      ImageComponents = images.map((image) => {
+        return <Image key={image.uuid} {...image}/>;
       });
     }
 
     return (
       <article className="contextual-region node node--type-article node--promoted node--view-mode-full">
         <div className="group-meta">
-          <div dangerouslySetInnerHTML={{__html: body.value }} className="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item quickedit-field"></div>
+          <div dangerouslySetInnerHTML={{__html: body.full }} className="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item quickedit-field"></div>
           <div className="group-tags">
             <ul className="field field--name-field-category field__items">
               { CategoryComponents }
@@ -55,7 +51,7 @@ export default class Node extends Component {
           </div>
         </div>
         <div className="field field--name-field-primary-image field--type-image field--label-hidden field__item quickedit-field">
-          <PrimaryImage url={ primary_image_url } meta={ field_primary_image.data.meta } />
+          <PrimaryImage {...primaryImage} />
         </div>
         <ul className="field field--name-field-image field--type-image field--label-hidden field__items quickedit-field">
           { ImageComponents }

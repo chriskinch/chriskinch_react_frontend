@@ -7,12 +7,3 @@
 
 // END CRITICAL
 }
-
-@include jacket(non-critical) {
-    @include mq($from: regular) {
-        .node--view-mode-full .field--name-field-primary-image {
-            float: right;
-            width: 70%;
-        }
-    }
-}

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 export default class ProjectLink extends Component {
   render() {
-    const { uri, title } = this.props;
+    const { url, name } = this.props;
 
     return (
 		<li className="field__item">
-			<a href={ uri }>
-				{ title }
+			<a href={ url }>
+				{ name }
 			</a>
 		</li>
     );

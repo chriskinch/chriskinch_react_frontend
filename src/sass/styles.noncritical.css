@@ -226,11 +226,6 @@ footer {
       background-color: #ffdb55; }
 
 @media (min-width: 60em) {
-  .node--view-mode-full .field--name-field-primary-image {
-    float: right;
-    width: 70%; } }
-
-@media (min-width: 60em) {
   .field--name-field-image {
     float: right;
     width: 70%; } }

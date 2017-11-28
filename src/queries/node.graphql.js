@@ -1,46 +1,39 @@
 import gql from 'graphql-tag';
 
-export const Example = gql`query example {
-  __typename
-  nodeQuery(filter:{status:true}) {
-    entities {
-      entityLabel
-      entityUuid
-      entityPublished
-      entityUrl {
-        alias
-      }
-      ... on NodeArticle {
-        fieldLink {
-          uri
-          title
+export const RoutePath = gql`query routePath($path: String!) {
+  route(path: $path){
+    __typename
+    nodeContext {
+      ... on Node {
+        title
+        uuid
+        published:entityPublished
+        body {
+          full:processed
         }
-        fieldTags {
+        links:fieldLink {
+          url:uri
+          name:title
+        }
+        tags:fieldTags {
           entity {
-            entityUrl {
+            uuid
+            url:entityUrl {
               alias
             }
             name
           }
         }
-        fieldCategory {
+        categories:fieldCategory {
           entity {
+            uuid
+            url:entityUrl {
+              alias
+            }
             name
           }
         }
-        fieldTeaserImage {
-          alt
-          height
-          title
-          width
-          url
-          defaultCrop:derivative(style: scale_crop_500) {
-            height
-            width
-            url
-          }
-        }
-        fieldPrimaryImage {
+        primaryImage:fieldPrimaryImage {
           alt
           height
           title
@@ -67,7 +60,7 @@ export const Example = gql`query example {
             url
           }
         }
-        fieldImage {
+        images:fieldImage {
           alt
           height
           title

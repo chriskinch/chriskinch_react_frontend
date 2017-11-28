@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 export default class PrimaryImage extends Component {
   render() {
-    const { meta, url } = this.props;
-    const { alt, title } = meta;
+    const { alt, wideCrop, title } = this.props;
+    const { url, height, width } = wideCrop;
 
     return (
-      <img src={ url } width="830" height="572" alt={ alt } title={ title } typeof="foaf:Image" className="image-style-scale-width-830" />
+      <img src={ url } alt={ alt } title={ title } height={ height } width={ width } typeof="foaf:Image" className="image-style-scale-width-830" />
     );
   }
 }

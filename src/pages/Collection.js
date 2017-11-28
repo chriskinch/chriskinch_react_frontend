@@ -3,23 +3,22 @@ import React, { Component } from 'react';
 import Teaser from "components/Teaser";
 
 import { graphql } from 'react-apollo';
-import { HomePosts } from 'config/homepage.graphql.js';
+import { HomeNodes } from 'queries/homepage.graphql.js';
 
 class Collection extends Component {
 
   render() {
-
     if(this.props.data.loading) {
       return(
         <div>LOADING</div>
       );
     }
 
-    const nodes = this.props.data.nodeQuery.entities;
+    const { entities } = this.props.data.nodeQuery;
     let TeaserComponents = [];
-    if(nodes) {  
-      TeaserComponents = nodes.map((node) => {
-        return <Teaser key={node.entityUuid} {...node}/>;
+    if(entities) {  
+      TeaserComponents = entities.map((entity) => {
+        return <Teaser key={entity.uuid} {...entity}/>;
       });
     }
 
@@ -35,7 +34,7 @@ class Collection extends Component {
   }
 }
 
-const CollectionWithData = graphql(HomePosts)(Collection);
+const CollectionWithData = graphql(HomeNodes)(Collection);
 
 export default CollectionWithData
 

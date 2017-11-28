@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 export default class Tag extends Component {
   render() {
-    const { name, entityUrl } = this.props.entity;
-    const { alias } = entityUrl;
+    const { name, url } = this.props;
+    const { alias } = url;
 
     return (
       <li className="field__item">

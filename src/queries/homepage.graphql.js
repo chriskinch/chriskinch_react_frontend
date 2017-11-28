@@ -1,39 +1,39 @@
 import gql from 'graphql-tag';
 
-export const HomePosts = gql`query homePosts {
+export const HomeNodes = gql`query homeNodes {
   __typename
   nodeQuery(filter:{status:true}) {
     entities {
-      entityLabel
-      entityUuid
-      entityPublished
-      entityUrl {
+      title:entityLabel
+      uuid:entityUuid
+      published:entityPublished
+      url:entityUrl {
         alias
       }
-      ... on NodeArticle {
+      ... on Node {
         body {
           summary
-          processed
+          full:processed
         }
-        fieldTags {
+        tags:fieldTags {
           entity {
             uuid
-            entityUrl {
+            url:entityUrl {
               alias
             }
             name
           }
         }
-        fieldCategory {
+        categories:fieldCategory {
           entity {
             uuid
-            entityUrl {
+            url:entityUrl {
               alias
             }
             name
           }
         }
-        fieldTeaserImage {
+        teaserImage:fieldTeaserImage {
           alt
           height
           title
@@ -45,7 +45,7 @@ export const HomePosts = gql`query homePosts {
             url
           }
         }
-        fieldPrimaryImage {
+        primaryImage:fieldPrimaryImage {
           alt
           height
           title

@@ -993,12 +993,10 @@ h1 {
     width: calc(100% / 3); } }
 
 @media (min-width: 60em) {
-  .node--view-mode-full .group-meta {
-    width: 25%;
-    float: left; }
-  .node--view-mode-full > *:not(.group-meta) {
-    width: 68.75%;
-    float: right; } }
+  .node--view-mode-full {
+    display: grid;
+    grid-template-columns: 25% 70%;
+    grid-column-gap: 5%; } }
 
 .region-header {
   text-align: center;

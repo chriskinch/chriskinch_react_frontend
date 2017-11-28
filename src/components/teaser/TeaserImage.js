@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 
 export default class TeaserImage extends Component {
   render() {
-    const { path, url, alt, height, width, title } = this.props;
+    const { path, alt, defaultCrop, title } = this.props;
+    const { url, height, width } = defaultCrop;
 
     return (
       <div className="field field--name-field-teaser-image field--type-image field--label-hidden field__item">
