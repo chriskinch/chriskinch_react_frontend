@@ -4,22 +4,26 @@ import { graphql } from 'react-apollo';
 import { RoutePath } from 'queries/node.graphql.js';
 
 class Page extends Component {
+  constructor(){
+    super();
+    this.state = {
+      nodeContext: null
+    }
+  }
+
+  componentWillReceiveProps(props) {
+    if(!props.data.loading) {
+      this.setState({
+        nodeContext: props.data.route.nodeContext
+      });
+    }
+  }
 
   render() {
-    console.log(this.props);
-    if(this.props.data.loading) {
-      return(
-        <div>LOADING</div>
-      );
-    }
-    console.log(this.props);
-    const { nodeContext } = this.props.data.route;
-
     return (
       <div id="block-chriskinch-content" className="block block-system block-system-main-block">
-        <Node {... nodeContext } />
+        <Node {... this.state.nodeContext } />
       </div>
-
     );
   }
 }

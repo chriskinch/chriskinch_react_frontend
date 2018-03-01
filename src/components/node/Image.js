@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 
-export default class Image extends Component {
+class Image extends Component {
   render() {
-  	const base_url = process.env.REACT_APP_API_BASE_URL;
-    const { meta, attributes} = this.props;
-    const { url } = attributes;
-    const { alt, title } = meta;
-    const image_url = base_url + url;
+    const { alt, wideCrop, title } = this.props;
+    const { url, height, width } = wideCrop;
 
     return (
       <li className="field__item">
-        <img src={ image_url } width="830" height="572" alt={ alt } title={ title } typeof="foaf:Image" className="image-style-scale-width-830" />
+        <img src={ url } width={ width } height={ height } alt={ alt } title={ title } typeof="foaf:Image" className="image-style-scale-width-830" />
       </li>
     );
   }
 }
 
+Image.defaultProps = {
+  wideCrop: {
+    url: "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+    height: 900,
+    width: 1600
+  }
+}
 
+export default Image

@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
-fetch(`http://chriskinch.com.drupal-8.x.dev/graphql`, {
+fetch(`http://localhost/drupal-8.x/chriskinch.com/web/graphql`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({

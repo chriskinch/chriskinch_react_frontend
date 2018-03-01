@@ -5,9 +5,8 @@ import PrimaryImage from 'components/node/PrimaryImage'
 import ProjectLink from 'components/node/ProjectLink'
 import Tag from 'components/Tag';
 
-export default class Node extends Component {
+class Node extends Component {
   render() {
-    console.log(this.props)
     const { body, links, categories, tags, primaryImage, images } = this.props;  
     
     let CategoryComponents, TagComponents, ProjectLinkComponents, ImageComponents = [];
@@ -60,3 +59,11 @@ export default class Node extends Component {
     );
   }
 }
+
+Node.defaultProps = {
+  body: {
+    full: "..."
+  }
+}
+
+export default Node

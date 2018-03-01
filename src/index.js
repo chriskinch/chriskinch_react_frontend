@@ -21,7 +21,7 @@ const fragmentMatcher = new IntrospectionFragmentMatcher({
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri:'http://chriskinch.com.drupal-8.x.dev/graphql'
+    uri:'https://master-7rqtwti-fwe7vafwacyza.eu.platform.sh/graphql'
   }),
   cache: new InMemoryCache({
     fragmentMatcher

@@ -8,13 +8,8 @@ import { HomeNodes } from 'queries/homepage.graphql.js';
 class Collection extends Component {
 
   render() {
-    if(this.props.data.loading) {
-      return(
-        <div>LOADING</div>
-      );
-    }
-
-    const { entities } = this.props.data.nodeQuery;
+    const { entities } = this.props.data.nodeQuery || {};
+    console.log("DATA:", this.props.data);
     let TeaserComponents = [];
     if(entities) {  
       TeaserComponents = entities.map((entity) => {

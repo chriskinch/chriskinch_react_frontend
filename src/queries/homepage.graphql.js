@@ -60,4 +60,12 @@ export const HomeNodes = gql`query homeNodes {
       }
     }
   }
+  menuByName(name: "main") {
+    links {
+      label
+      url {
+        path
+      }
+    }
+  }
 }`

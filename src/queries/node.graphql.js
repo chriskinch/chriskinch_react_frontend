@@ -90,4 +90,12 @@ export const RoutePath = gql`query routePath($path: String!) {
       }
     }
   }
+  menuByName(name: "main") {
+    links {
+      label
+      url {
+        path
+      }
+    }
+  }
 }`

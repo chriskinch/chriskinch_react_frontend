@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class PrimaryImage extends Component {
+class PrimaryImage extends Component {
   render() {
     const { alt, wideCrop, title } = this.props;
     const { url, height, width } = wideCrop;
@@ -11,4 +11,12 @@ export default class PrimaryImage extends Component {
   }
 }
 
+PrimaryImage.defaultProps = {
+  wideCrop: {
+    url: "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+    height: 900,
+    width: 1600
+  }
+}
 
+export default PrimaryImage

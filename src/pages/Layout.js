@@ -11,7 +11,7 @@ import Title from "components/Title";
 import "sass/styles.critical.css";
 import "sass/styles.noncritical.css";
 
-export default class Layout extends Component {
+class Layout extends Component {
   constructor(){
     super();
     this.getTitle = this.getTitle.bind(this);
@@ -69,3 +69,4 @@ export default class Layout extends Component {
   }
 }
 
+export default Layout

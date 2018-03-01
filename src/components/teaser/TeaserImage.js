@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-export default class TeaserImage extends Component {
+class TeaserImage extends Component {
   render() {
     const { path, alt, defaultCrop, title } = this.props;
     const { url, height, width } = defaultCrop;
@@ -19,4 +19,12 @@ export default class TeaserImage extends Component {
   }
 }
 
+TeaserImage.defaultProps = {
+  defaultCrop: {
+    url: "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+    height: 500,
+    width: 500
+  }
+}
 
+export default TeaserImage

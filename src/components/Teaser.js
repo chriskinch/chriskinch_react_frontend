@@ -3,13 +3,13 @@ import { Link } from 'react-router';
 import Tag from 'components/Tag';
 import TeaserImage from 'components/teaser/TeaserImage';
 
-export default class Teaser extends Component {
+class Teaser extends Component {
 
   render() {
-    console.log(this.props);
     const { url, title, body, categories, tags, teaserImage, primaryImage } = this.props;
     const { alias } = url;
     const image = (teaserImage)? teaserImage : primaryImage;
+    console.log(this.props)
 
     let CategoryComponents, TagComponents = [];
     if(categories) {
@@ -43,4 +43,12 @@ export default class Teaser extends Component {
   }
 }
 
+Teaser.defaultProps = {
+  url: { alias: null },
+  title: "...",
+  body: {
+    full: ""
+  }
+}
 
+export default Teaser
