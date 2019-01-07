@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Teaser from "components/Teaser";
+import Teaser from "components/teaser/Teaser";
 
 import { graphql } from 'react-apollo';
 import { HomeNodes } from 'queries/homepage.graphql.js';
