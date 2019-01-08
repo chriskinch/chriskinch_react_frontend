@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Node from 'components/Node';
+import Node from 'components/node/Node';
 import { graphql } from 'react-apollo';
 import { RoutePath } from 'queries/node.graphql.js';
 

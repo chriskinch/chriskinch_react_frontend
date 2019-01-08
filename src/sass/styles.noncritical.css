@@ -167,17 +167,13 @@ footer {
   line-height: 1em;
   margin-right: 0.5em;
   margin-bottom: 0.5em; }
-  .field--name-field-tags .field__item a:link,
-  .field--name-field-category .field__item a:link, .field--name-field-tags .field__item a:visited,
-  .field--name-field-category .field__item a:visited {
+  .field--name-field-tags .field__item a:link, .field--name-field-category .field__item a:link, .field--name-field-tags .field__item a:visited, .field--name-field-category .field__item a:visited {
     color: #444444;
     padding: 1em 1em 0.95em;
     display: block; }
-  .field--name-field-tags .field__item a:hover,
-  .field--name-field-category .field__item a:hover {
+  .field--name-field-tags .field__item a:hover, .field--name-field-category .field__item a:hover {
     background: #eebb00; }
-  .field--name-field-tags .field__item a.active,
-  .field--name-field-category .field__item a.active {
+  .field--name-field-tags .field__item a.active, .field--name-field-category .field__item a.active {
     color: #444444; }
 
 .field--name-field-tags,

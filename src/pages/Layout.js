@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import AppStore from "stores/AppStore";
 
-import Footer from 'components/layout/Footer';
-import Header from 'components/layout/Header';
-import Nav from "components/layout/Nav";
-import Social from "components/Social";
-import Title from "components/Title";
+import Footer from 'components/footer/Footer';
+import Header from 'components/header/Header';
+import Navigation from "components/navigation/Navigation";
+import Social from "components/social/Social";
+import Title from "components/title/Title";
 
 import "sass/styles.critical.css";
 import "sass/styles.noncritical.css";
@@ -50,7 +50,7 @@ class Layout extends Component {
       <div className="layout-container">
           <Header />
         <div className="region region-primary-menu">
-          <Nav />
+          <Navigation />
           <Social />
         </div>
         <main>
