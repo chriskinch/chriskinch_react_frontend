@@ -165,23 +165,6 @@
         "trackDir": "src/components/tag",
         "origin": "AUTHORED"
     },
-    "chriskinch.chriskinchcom/components/title@1.0.0": {
-        "files": [
-            {
-                "relativePath": "src/components/title/Title.js",
-                "test": false,
-                "name": "Title.js"
-            },
-            {
-                "relativePath": "src/components/title/index.js",
-                "test": false,
-                "name": "index.js"
-            }
-        ],
-        "mainFile": "src/components/title/index.js",
-        "trackDir": "src/components/title",
-        "origin": "AUTHORED"
-    },
     "chriskinch.chriskinchcom/components/teaser-image@1.0.0": {
         "files": [
             {
@@ -231,6 +214,28 @@
         ],
         "mainFile": "src/components/node-link/index.js",
         "trackDir": "src/components/node-link",
+        "origin": "AUTHORED"
+    },
+    "chriskinch.chriskinchcom/components/title@1.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/title/Title.js",
+                "test": false,
+                "name": "Title.js"
+            },
+            {
+                "relativePath": "src/components/title/Title.test.js",
+                "test": false,
+                "name": "Title.test.js"
+            },
+            {
+                "relativePath": "src/components/title/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/title/index.js",
+        "trackDir": "src/components/title",
         "origin": "AUTHORED"
     },
     "version": "13.0.4"
