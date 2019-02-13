@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot renders correctly 1`] = `
+<div
+  className="views-row"
+>
+  <article
+    className="node node--type-article node--promoted node--view-mode-teaser"
+  >
+    <h2
+      className="node--title"
+    >
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        My teaser card
+      </a>
+    </h2>
+    <div
+      className="field field--name-field-teaser-image field--type-image field--label-hidden field__item"
+    >
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+          />
+          <img
+            height={500}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            typeof="foaf:Image"
+            width={500}
+          />
+        </picture>
+      </a>
+    </div>
+    <ul
+      className="field field--name-field-category field__items"
+    />
+    <div
+      className="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item quickedit-field"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+    />
+    <ul
+      className="field field--name-field-tags field__items"
+    />
+  </article>
+</div>
+`;

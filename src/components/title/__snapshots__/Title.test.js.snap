@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="block block-core block-page-title-block"
+  id="block-chriskinch-page-title"
+>
+  <h1
+    className="page-title"
+  >
+    My example title
+  </h1>
+</div>
+`;
