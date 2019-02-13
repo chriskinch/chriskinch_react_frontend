@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot renders correctly 1`] = `
+<div
+  className="field field--name-field-teaser-image field--type-image field--label-hidden field__item"
+>
+  <a
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <picture>
+      <source
+        media="(max-width: 600px)"
+        srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+      />
+      <img
+        alt="Teaser Image"
+        height={500}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+        title="Grey pixel"
+        typeof="foaf:Image"
+        width={500}
+      />
+    </picture>
+  </a>
+</div>
+`;

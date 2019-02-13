@@ -1,15 +1,11 @@
-import { expect } from 'chai';
 import React from 'react';
 import Title from './Title';
-import {mount} from 'enzyme';
-mockDom('<html><body></body></html>');
+import renderer from 'react-test-renderer';
 
-describe('Title', () => {
-  function mountComponent(props = {}) {
-    return mount(<Title />);
-  }
 
-  it('Should render', () => {
-    expect(Title).to.be.ok;
-  });
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<Title text="My example title" />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
 });
